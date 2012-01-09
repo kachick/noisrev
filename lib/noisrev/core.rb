@@ -44,8 +44,7 @@ class Noisrev < Striuct.new
     default name, 0
   end
 
-  alias_method :patch, :revision
-  alias_method :patch=, :revision=
+  alias_member :patch, :revision
 
   member :optional, nil, versionable_number,
          ->v{[Symbol, String].any?{|klass|v.kind_of? klass} && (! v.empty?)}
@@ -151,8 +150,7 @@ class Noisrev < Striuct.new
     @dependencies.freeze
     super
   end
-end
 
-class Noisrev
   RUBY_VERSION = parse(::RUBY_VERSION).freeze
 end
+

@@ -13,7 +13,7 @@ $hoe = Hoe.spec 'noisrev' do
   developer 'Kenichi Kamiya', 'kachick1+ruby@gmail.com'
   self.rubyforge_name       = self.name
   require_ruby_version '>= 1.9.2'
-  dependency 'striuct', '>= 0.1.2', :runtime
+  dependency 'striuct', '>= 0.1.3', :runtime
   dependency 'yard', '>= 0.7.4', :development
 end
 

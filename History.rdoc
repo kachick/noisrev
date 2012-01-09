@@ -1,3 +1,9 @@
+=== 0.0.2 2012-?-?
+
+* fix:
+  * .#parse
+  * alias member 'patch'
+
 === 0.0.1 2012-1-9
 
 * 1 major enhancement:
