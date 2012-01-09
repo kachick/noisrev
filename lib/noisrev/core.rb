@@ -13,6 +13,7 @@ class Noisrev < Striuct.new
       load_values(*str.split(DELIMITER).map{|s|Integer s})
     end
     
+    # @return [String]
     def inspect
       "#{self.class} (express versions)"
     end
@@ -58,13 +59,15 @@ class Noisrev < Striuct.new
       end
     end
   end
-  
+
+  # @return [String]
   def to_s
     valids.join DELIMITER
   end
   
   alias_method :to_str, :to_s
   
+  # @return [self]
   def current
     self
   end
