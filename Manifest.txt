@@ -1,0 +1,10 @@
+History.rdoc
+Manifest.txt
+README.rdoc
+Rakefile
+example.rb
+lib/noisrev/core.rb
+lib/noisrev/import.rb
+lib/noisrev.rb
+test/test_helper.rb
+test/test_noisrev.rb
