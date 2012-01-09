@@ -4,6 +4,8 @@ require 'striuct'
 class Noisrev < Striuct.new
   include Comparable
 
+  VERSION = '0.0.1'.freeze
+  Version = VERSION
   DELIMITER = '.'.freeze
   
   class << self
@@ -132,6 +134,4 @@ end
 
 class Noisrev
   RUBY_VERSION = parse(::RUBY_VERSION).freeze
-  VERSION = new(0, 0, 1).freeze
-  Version = VERSION
 end
