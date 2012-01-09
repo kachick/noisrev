@@ -4,7 +4,7 @@ require 'striuct'
 class Noisrev < Striuct.new
   include Comparable
 
-  VERSION = '0.0.2.a'.freeze
+  VERSION = '0.0.2'.freeze
   Version = VERSION
   DELIMITER = '.'.freeze
   

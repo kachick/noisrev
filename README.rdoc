@@ -5,7 +5,7 @@
 
 == DESCRIPTION
 
-expression library versions
+version <-> noisrev
 
 == FEATURES
 * expression for library versions
