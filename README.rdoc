@@ -2,6 +2,7 @@
 
 * http://github.com/kachick/noisrev
 * https://rubygems.org/gems/noisrev
+* http://rubyforge.org/projects/noisrev/
 
 == DESCRIPTION
 
