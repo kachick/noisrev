@@ -17,13 +17,16 @@ expression library versions
 * setup
     require 'noisrev'
 
+* entend
+    require 'noisrev/import'
+
 * use below namespace
     Noisrev
     Version  # when use import.rb
 
 * from fixnum
     Version.new 0, 0, 1
-    Version 0, 0, 1  # when use import.rb
+    Version 0, 0, 1
 
 * from string
     version = Version.parse '0.0.1'
