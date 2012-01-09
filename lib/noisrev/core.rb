@@ -9,7 +9,7 @@ class Noisrev < Striuct.new
   DELIMITER = '.'.freeze
   
   class << self
-    # @param [String]
+    # @param [String] str
     # @return [Noisrev]
     def parse(str)
       load_values(*str.split(DELIMITER).map{|s|Integer s})
