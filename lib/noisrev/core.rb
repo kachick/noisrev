@@ -4,15 +4,28 @@ require 'striuct'
 class Noisrev < Striuct.new
   include Comparable
 
-  VERSION = '0.0.1'.freeze
+  VERSION = '0.0.2.a'.freeze
   Version = VERSION
   DELIMITER = '.'.freeze
   
   class << self
-    # @param [String] str
+    # @param [#split] str ex: '0.0.1.a'
     # @return [Noisrev]
     def parse(str)
-      load_values(*str.split(DELIMITER).map{|s|Integer s})
+      tokens = str.split(DELIMITER)
+      values = tokens.first(3).map{|s|Integer s}
+
+      case tokens.length
+      when 3
+      when 4
+        values << tokens.last
+      else
+        raise
+      end
+
+      load_values(*values)
+    rescue
+      raise 'Unknown format'
     end
     
     # @return [String]
@@ -33,14 +46,19 @@ class Noisrev < Striuct.new
 
   alias_method :patch, :revision
   alias_method :patch=, :revision=
-  
-  member :optional, nil, versionable_number, Symbol, String
-  member :dependencies, ->v{v.respond_to? :each_pair}
-  default :dependencies, {}
+
+  member :optional, nil, versionable_number,
+         ->v{[Symbol, String].any?{|klass|v.kind_of? klass} && (! v.empty?)}
+  close
+
+  def initialize(*values)
+    super(*values)
+    @dependencies = {}
+  end
 
   # @return [Array]
   def valids
-    optional ? values : values[0..-3]
+    optional ? values : values[0..-2]
   end
 
   # @param [Noisrev, String, Fixnum, #to_str] other
@@ -102,11 +120,11 @@ class Noisrev < Striuct.new
       end
     )
     
-    dependencies[name] = range
+    @dependencies[name] = range
   end
 
   def runnable?
-    dependencies.all? {|name, range|
+    @dependencies.all? {|name, range|
       current_version = (
         case name
         when :Ruby
@@ -129,7 +147,10 @@ class Noisrev < Striuct.new
     }
   end
 
-  close
+  def freeze
+    @dependencies.freeze
+    super
+  end
 end
 
 class Noisrev

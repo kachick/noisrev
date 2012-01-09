@@ -6,6 +6,7 @@ class TestNoisrev < Test::Unit::TestCase
 
   def test_parse
     assert_equal(VERSION, Noisrev.parse('0.0.1'))
+    assert_equal([1, 2, 3, 'a'], Noisrev.parse('1.2.3.a').values)
   end
   
   def test_to_s
