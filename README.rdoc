@@ -10,7 +10,7 @@ version <-> noisrev
 
 == FEATURES
 * expression for library versions
-* Keeping compatibility with String
+* keeping compatibility with String
 * Pure Ruby
 
 == SYNOPSIS
@@ -54,7 +54,7 @@ version <-> noisrev
 == REQUIREMENTS
 
 * Ruby 1.9.2 and later (tested 1.9.2, 1.9.3)
-* striuct
+* striuct 0.2.0
 
 == INSTALL
 

@@ -4,7 +4,7 @@ require 'striuct'
 class Noisrev < Striuct.new
   include Comparable
 
-  VERSION = '0.0.2'.freeze
+  VERSION = '0.0.3'.freeze
   Version = VERSION
   DELIMITER = '.'.freeze
   
@@ -27,12 +27,7 @@ class Noisrev < Striuct.new
     rescue
       raise 'Unknown format'
     end
-    
-    # @return [String]
-    def inspect
-      "#{self.class} (express versions)"
-    end
-    
+
     def first
       load_values 0, 0, 1
     end
@@ -46,9 +41,8 @@ class Noisrev < Striuct.new
 
   alias_member :patch, :revision
 
-  member :optional, nil, versionable_number,
-         ->v{[Symbol, String].any?{|klass|v.kind_of? klass} && (! v.empty?)}
-  close
+  member :optional, OR(nil, versionable_number, AND(OR(Symbol, String), ->v{! v.empty?}))
+  close_member
 
   def initialize(*values)
     super(*values)
@@ -74,7 +68,7 @@ class Noisrev < Striuct.new
       if other.respond_to?(:to_str)
         self <=> other.to_str
       else
-        raise TypeError
+        nil
       end
     end
   end
@@ -153,4 +147,3 @@ class Noisrev < Striuct.new
 
   RUBY_VERSION = parse(::RUBY_VERSION).freeze
 end
-
