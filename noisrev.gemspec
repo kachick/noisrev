@@ -1,4 +1,4 @@
-require File.expand_path('../lib/noisrev/version', __FILE__)
+require File.expand_path('../lib/noisrev', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ['Kenichi Kamiya']
