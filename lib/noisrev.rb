@@ -128,8 +128,6 @@ class Noisrev < Striuct
 
 end
 
-
-require_relative 'noisrev/version'
 require_relative 'noisrev/singleton_class'
 
 class Noisrev

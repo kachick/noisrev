@@ -7,7 +7,6 @@ Gemfile
 noisrev.gemspec
 
 lib/noisrev.rb
-lib/noisrev/version.rb
 lib/noisrev/singleton_class.rb
 lib/noisrev/import.rb
 

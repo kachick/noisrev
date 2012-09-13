@@ -2,12 +2,19 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'striuct', '~> 0.3'
+group :runtime do
+  gem 'rake'
+  gem 'striuct', '~> 0.3'
+end
+
+group :test do
+  gem 'rake'
+  gem 'striuct', '~> 0.3'
+end
 
 group :development do
   gem 'rake'
 end
 
-group :test do
-  gem 'rake'
-end
+
+
