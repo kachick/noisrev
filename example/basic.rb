@@ -1,7 +1,7 @@
-#!/usr/bin/ruby -w
+#!/usr/bin/env ruby
 
-require_relative 'lib/noisrev'
-require_relative 'lib/noisrev/import'
+require_relative '../lib/noisrev'
+require_relative '../lib/noisrev/import'
 
 p Version.new
 
@@ -18,7 +18,6 @@ p(version == '0.0.1')
 p('0.0.1' == version)
 p version.next.to_s
 p version.next(:major).to_s
-p version.to_yaml
 
 p('0.10.0' > '0.2.0')
 p(Version.new(0, 10, 0) > '0.2.0')

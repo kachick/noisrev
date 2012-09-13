@@ -1,7 +1,7 @@
-$VERBOSE = true
-require File.dirname(__FILE__) + '/test_helper.rb'
+require_relative 'helper'
 
 class TestNoisrev < Test::Unit::TestCase
+
   VERSION = Noisrev.new 0, 0, 1
 
   def test_parse
@@ -36,4 +36,5 @@ class TestNoisrev < Test::Unit::TestCase
     version.depend(:Ruby, '1.9.2'..Noisrev::RUBY_VERSION.next)
     assert_equal(true, version.runnable?)
   end
+
 end
