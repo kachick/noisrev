@@ -65,6 +65,7 @@ $ gem install noisrev
 Link
 ----
 
+* [Home](http://kachick.github.com/noisrev/)
 * [code](https://github.com/kachick/noisrev)
 * [API](http://kachick.github.com/noisrev/yard/frames.html)
 * [issues](https://github.com/kachick/noisrev/issues)
