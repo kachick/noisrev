@@ -68,7 +68,7 @@ class Noisrev < Striuct
   def succ(field=:revision)
     raise NameError unless member? field
   
-    self.class.load_pairs({}.tap{|hash|
+    self.class.for_pairs({}.tap{|hash|
       each_pair do |name, value|
         hash[name] = name == field ? (value.succ) : value
         break if name == field

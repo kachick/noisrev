@@ -46,7 +46,7 @@ Requirements
 -------------
 
 * Ruby - [1.9.2 or later](http://travis-ci.org/#!/kachick/noisrev)
-* [striuct](https://github.com/kachick/striuct) - 0.3
+* [striuct](https://github.com/kachick/striuct) - 0.4
 
 Build Status
 -------------
