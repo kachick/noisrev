@@ -1,8 +1,6 @@
 noisrev
 ========
 
-[![Build Status](https://secure.travis-ci.org/kachick/noisrev.png)](http://travis-ci.org/kachick/noisrev)
-
 Description
 -----------
 
@@ -22,7 +20,7 @@ Usage
 
 ```ruby
 require 'noisrev'
-require 'noisrev/import'       #=> Version = Noisrev
+require 'noisrev/core_ext'       #=> Version = Noisrev
 
 # Construct
 Version 0, 0, 1
@@ -50,6 +48,11 @@ Requirements
 * Ruby - [1.9.2 or later](http://travis-ci.org/#!/kachick/noisrev)
 * [striuct](https://github.com/kachick/striuct) - 0.3
 
+Build Status
+-------------
+
+[![Build Status](https://secure.travis-ci.org/kachick/noisrev.png)](http://travis-ci.org/kachick/noisrev)
+
 Install
 -------
 
@@ -70,5 +73,5 @@ License
 --------
 
 The MIT X11 License  
-Copyright (C) 2012 Kenichi Kamiya  
-See the file LICENSE for further details.
+Copyright (c) 2012 Kenichi Kamiya  
+See MIT-LICENSE for further details.

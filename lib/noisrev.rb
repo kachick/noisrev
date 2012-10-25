@@ -1,5 +1,5 @@
 # noisrev - Noisrev <-> Version :)
-# Copyright (C) 2012 Kenichi Kamiya
+# Copyright (c) 2012 Kenichi Kamiya
 
 require 'striuct'
 
