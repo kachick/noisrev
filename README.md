@@ -1,6 +1,10 @@
 noisrev
 ========
 
+* ***This repository is archived***
+* ***No longer maintained***
+* ***All versions have been yanked from https://rubygems.org/ for releasing valuable namespace for others***
+
 Description
 -----------
 
@@ -54,23 +58,6 @@ Build Status
 -------------
 
 [![Build Status](https://secure.travis-ci.org/kachick/noisrev.png)](http://travis-ci.org/kachick/noisrev)
-
-Install
--------
-
-```bash
-$ gem install noisrev
-```
-
-Link
-----
-
-* [Home](http://kachick.github.com/noisrev/)
-* [code](https://github.com/kachick/noisrev)
-* [API](http://kachick.github.com/noisrev/yard/frames.html)
-* [issues](https://github.com/kachick/noisrev/issues)
-* [CI](http://travis-ci.org/#!/kachick/noisrev)
-* [gem](https://rubygems.org/gems/noisrev)
 
 License
 --------
